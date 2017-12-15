@@ -1,0 +1,24 @@
+
+<nz-layout>
+    <nz-header style="background-color: #fff;height: 70px;">
+      <img src="../../assets/images/logotrans.png">&nbsp;&nbsp;
+      <span style="font-size: 18px;">|  UVA太阳能电站巡检系统</span>
+      <div class="NavSelect">
+        <ul nz-menu [nzMode]="'horizontal'"  >
+          <li nz-menu-item nzSelected="'true'"> 巡检管理</li>
+          <li  nz-menu-item> 巡检详情</li>
+          <li nz-menu-item> 用户管理</li>
+        </ul>
+        <i class="anticon anticon-search" ></i>
+        <nz-avatar nzIcon="user" class="userIcon" style="background-color:#87d068;"></nz-avatar>
+      </div>
+    </nz-header>
+    <nz-content style="background-color: #f7f7f7">
+      <div class="content-body">
+        <router-outlet></router-outlet>
+
+      </div>
+
+    </nz-content>
+</nz-layout>
+

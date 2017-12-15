@@ -1,0 +1,51 @@
+.content{
+  padding:8px 20px ;
+}
+.title{
+  margin-bottom: 8px;
+}
+.location_table{
+  float: left;
+  width:62%;
+  margin-right: 20px;
+  //border: 1px solid #d8d8d8;
+  height:355px;
+  th{
+    text-align: center;
+    background: grey;
+  }
+  td{
+    height: 20px;
+    text-align: center;
+    background: #fff;
+  }
+}
+.ant-table-bordered .ant-table-thead > tr > th {
+  border-bottom: 1px solid dimgrey;
+  background: dimgrey;
+  text-align: center;
+  color: #fff;
+}
+.location_map{
+  float: left;
+  width:36%;
+  border: 8px solid #fff;
+  height:355px;
+}
+.check_history{
+  width:99%;
+  height:400px;
+  float: left;
+  margin-top: 20px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px 8px ;
+  overflow: hidden;
+  .title{
+    height:36px;
+    line-height: 36px;
+    font-size: 14px;
+    background: dimgrey;
+    padding-left: 20px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,38 @@
+.NavSelect{
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  float: right;
+  padding-right: 150px;
+  position: relative;
+  ul{
+    display: inline-block;
+    height:100%;
+    padding-top: 20px;
+    font-size:16px;
+    margin-right: 10px;
+    li{
+      height:100%;
+    }
+  }
+  i{
+    position: absolute;
+    top:35px;
+    right: 80px;
+    font-size:20px;
+    cursor: pointer;
+  }
+  .userIcon{
+    position: absolute;
+    top:27px;
+    right: 20px;
+    font-size:20px;
+    cursor: pointer;
+  }
+}
+.content-body{
+  min-height: 850px;
+}
+.ant-layout{
+  min-width: 1024px;
+}
