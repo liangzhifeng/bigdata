@@ -5,35 +5,57 @@
     }
 }
 .justify-content-center{
-    margin-top: 0.8rem;
+    margin-top: 2.8rem;
+    width: 5rem;
     position: absolute;
     left: 50%;
     transform: translate(-50%,0);
-    input{
-        background: #4e4d4d;
-        border: 1px solid #387a9d;
-        color: #fff;
-    }
     button{
         background: #26a5ea;
         width: 100%;
-        margin-top: 0.3rem;
+        //margin-top: 0.3rem;
         border-radius: 0;
+        height: 0.65rem;
+      font-size:20px;
     }
 }
 .login-title{
     text-align: center;
-    .big-title{
-        font-size: 0.24rem;
-        font-family:HoneywellSans-Extrabold;
-        color:#f0f0f0;
-    }
-    .small-title{
-        font-size: 0.15rem;
-        color:#777;
-    }
+    width:5rem;
+  margin-bottom: 30px;
+  img{
+    width:60%;
+  }
 }
 .text-muted {
-    color: #777;
-    margin: 0.15rem 0 0.01rem 0;
+    //color: #FFF;
+  font-size: 18px;
+    margin: 0.3rem 0 0.1rem 0;
+}
+
+.mb-3{
+  align-items: center;
+  height: 0.8rem;
+  width:5rem;
+  position: relative;
+  .forgetPassword{
+    display: inline-block;
+    position: absolute;
+    top:0.3rem;
+    right: 0.1rem;
+  }
+  .remember_password{
+    position: absolute;
+    top:0.3rem;
+    left: 0.1rem;
+    font-weight:400;
+  }
+
+}
+
+
+.ant-input-lg {
+  padding: 6px 7px;
+  height: 40px;
+  width: 5rem;
 }

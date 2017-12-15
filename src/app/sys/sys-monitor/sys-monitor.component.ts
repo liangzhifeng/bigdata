@@ -104,6 +104,7 @@ export class SysMonitorComponent implements OnInit {
           this.userQty4 = userQty[3];
         let activeUser = serveData.activeUser;
         let RegisteredUser = serveData.RegisteredUser;
+          let AllRegisteredUser = serveData.AllRegisteredUser;
         this.p1Chart = {
           textStyle: {
             color: 'rgba(255, 255, 255, 0.3)'
@@ -217,7 +218,7 @@ export class SysMonitorComponent implements OnInit {
               data: [
                 {
                   value: userQty[1],
-                  name: 'Active User',
+                  name: 'On Road',
                   tooltip: {
                     trigger: 'item',
                     formatter: "{b} : {c} ({d}%)"
@@ -238,7 +239,7 @@ export class SysMonitorComponent implements OnInit {
                 },
                 {
                   value: userQty[2],
-                  name: 'NonActive User',
+                  name: 'Not On Road',
                   label: {
                     normal: {
                       show: false
@@ -298,7 +299,7 @@ export class SysMonitorComponent implements OnInit {
               data: [
                 {
                   value: userQty[2],
-                  name: 'Valid User',
+                  name: 'Avaliable',
                   tooltip: {
                     trigger: 'item',
                     position: [10, 10],
@@ -321,7 +322,7 @@ export class SysMonitorComponent implements OnInit {
                 },
                 {
                   value: 0,
-                  name: 'InValid User',
+                  name: 'Unavaliable',
                   label: {
                     normal: {
                       show: false
@@ -459,7 +460,7 @@ export class SysMonitorComponent implements OnInit {
             axisTick: {show: false},
             type: 'category',
             boundaryGap: false,
-            data:arr1
+            data:['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec']
           },
 
           yAxis : [
@@ -477,7 +478,7 @@ export class SysMonitorComponent implements OnInit {
           ],
           series: [
             {
-              name: 'Active',
+              name: 'Required',
               type: 'line',
               data: activeUser,
               lineStyle:{
@@ -500,7 +501,8 @@ export class SysMonitorComponent implements OnInit {
         RegisteredUser.forEach(function(item){
           var date = _self.sysMonitorService.monthInEn(item.date);
           line6Xdata.push(date);
-        })
+        });
+
         this.line6Chart = {
           title: {
             text: '',
@@ -516,7 +518,7 @@ export class SysMonitorComponent implements OnInit {
             axisTick: {show: false},
             type: 'category',
             boundaryGap: false,
-            data:line6Xdata
+            data:['Jan','Feb','Mar','Apr','May','June','July','Aug','Sept','Oct','Nov','Dec']
           },
 
           yAxis : [
@@ -545,6 +547,22 @@ export class SysMonitorComponent implements OnInit {
               itemStyle:{
                 normal:{
                   color:'#99ff00'
+                }
+              },
+              symbol: 'none'
+            },
+            {
+              name: 'AllRegistered',
+              type: 'line',
+              data: AllRegisteredUser,
+              lineStyle:{
+                normal:{
+                  color:'#ffd153'
+                }
+              },
+              itemStyle:{
+                normal:{
+                  color:'#ffd153'
                 }
               },
               symbol: 'none'

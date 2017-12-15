@@ -8,8 +8,7 @@
 # dependencies
 /node_modules
 /mock-server/node_modules
-dashboard/node_modules
-dashboard/mock-server/node_modules
+
 
 # IDEs and editors
 /.idea

@@ -16,9 +16,20 @@ app.use('/*', function (req, res, next) {
   next();
 })
 
-app.post('/admin/dashboard/getUserInfo',function(req,res){
-  var result;
-  result = {
+//登录
+app.post('/reg/employee/login',function(req, res){
+  var result = {
+    "code": 0,
+    "detail": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDg0NzMzNzcsIm5hbWUiOiJ6aGFuZ3lvbmdfbmV3IiwidXNlcl9pZCI6MX0.1dc_hmifgwd0kDMdZXiPbO82wlbCwSHBj7dv07mz-xk"
+  }
+  res.json(result);
+})
+
+
+app.post('/wholesale_dashboard/getUserInfo',function(req,res){
+  var result = {};
+  result.retbody = {};
+  result.retbody.getUserInfo = {
     "location":
       [
         {name: '拉萨', value: 24},
@@ -53,7 +64,7 @@ app.post('/admin/dashboard/getUserInfo',function(req,res){
         {name: '合肥', value: 229},
         {name: '武汉', value: 273}
       ],
-    "userQty":['805','1300','3205','2300','43505'],
+    "userQty":['0','30000','60000','100000','100000'],
     "activeUser":
       [
         {data: 'Jan1', value: 24},
@@ -103,7 +114,22 @@ app.post('/admin/dashboard/getUserInfo',function(req,res){
         {data: 'Jan9', value: 50},
         {data: 'Jan10', value: 11},
         {data: 'Jan11', value: 21},
-        {data: 'Jan12', value: 51},
+        {data: 'Jan12', value: 51}
+      ],
+    "AllRegisteredUser":
+      [
+        {data: 'Jan1', value: 14},
+        {data: 'Jan2', value: 55},
+        {data: 'Jan3', value: 19},
+        {data: 'Jan4', value: 17},
+        {data: 'Jan5', value: 21},
+        {data: 'Jan6', value: 39},
+        {data: 'Jan7', value: 3},
+        {data: 'Jan8', value: 14},
+        {data: 'Jan9', value: 50},
+        {data: 'Jan10', value: 11},
+        {data: 'Jan11', value: 21},
+        {data: 'Jan12', value: 51}
       ]
 
 
@@ -114,9 +140,10 @@ app.post('/admin/dashboard/getUserInfo',function(req,res){
   res.json(result);
 });
 
-app.post('/admin/dashboard/getTradeOrderInfo',function(req,res){
-  var result;
-  result = {
+app.post('/wholesale_dashboard/getTradeOrderInfo',function(req,res){
+  var result = {};
+  result.retbody = {};
+  result.retbody.getTradeOrderInfo = {
     "trade": {
       "tradeToday": '43,505',
       "tradeNums": [
@@ -240,8 +267,10 @@ app.post('/admin/dashboard/getTradeOrderInfo',function(req,res){
 });
 
 
-app.post('/admin/dashboard/getPlatformInfo',function(req,res){
-  var result = {
+app.post('/wholesale_dashboard/getPlatformInfo',function(req,res){
+  var result = {};
+  result.retbody = {};
+  result.retbody.getTradeOrderInfo = {
     "host": {
       "cur": 140,
       "total": 200,

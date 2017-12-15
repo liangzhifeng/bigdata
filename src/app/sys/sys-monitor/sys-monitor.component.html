@@ -3,104 +3,104 @@
   <div class="first-line">
     <div class="left user-layout">
       <div class="left_1">
-        <div class="title">User Quantity</div>
+        <div class="title">Smart Box Monitoring</div>
         <!--<div class="left-user">-->
-          <!--<echart *ngIf="hasP1Chart" [chartType]="p1Chart" class="chart"></echart>-->
-          <!--<div class="right-info">-->
-            <!--<div class="txt">Online User</div>-->
-            <!--<div class="num">{{userQty1}}</div>-->
-          <!--</div>-->
+        <!--<echart *ngIf="hasP1Chart" [chartType]="p1Chart" class="chart"></echart>-->
+        <!--<div class="right-info">-->
+        <!--<div class="txt">Online User</div>-->
+        <!--<div class="num">{{userQty1}}</div>-->
+        <!--</div>-->
         <!--</div>-->
         <div class="left-user">
           <echart *ngIf="hasP2Chart" [chartType]="p2Chart" class="chart"></echart>
           <div class="right-info">
-            <div class="txt">Active User</div>
+            <div class="txt">On Road </div>
             <div class="num">{{userQty2}}</div>
           </div>
         </div>
         <div class="left-user">
-          <echart *ngIf="hasP3Chart" [chartType]="p3Chart" class="chart"></echart>
+          <echart *ngIf="hasP3Chart" [chartType]="p2Chart" class="chart"></echart>
           <div class="right-info">
-            <div class="txt">Valid User</div>
+            <div class="txt">Avaliable </div>
             <div class="num">{{userQty3}}</div>
           </div>
         </div>
 
         <div class="left-user">
-            <echart *ngIf="hasP1Chart" [chartType]="p1Chart" class="chart"></echart>
-            <div class="right-info">
-                <div class="txt">Subscriber</div>
-                <div class="num">{{userQty4}}</div>
-            </div>
+          <echart *ngIf="hasP1Chart" [chartType]="p2Chart" class="chart"></echart>
+          <div class="right-info">
+            <div class="txt">Total</div>
+            <div class="num">{{userQty4}}</div>
+          </div>
         </div>
       </div>
 
     </div>
 
     <div class="center user-layout">
-      <div class="title">User Heat Map</div>
+      <div class="title">Return Box Distribution</div>
       <echart *ngIf="hasPie4Chart" [chartType]="pie4Chart" class="chart"></echart>
     </div>
 
     <div class="right user-layout">
       <div class="active-user">
-        <div class="title">Active User</div>
+        <div class="title">Box Required</div>
         <echart *ngIf="hasLine5Chart"  [chartType]="line5Chart" class="chart"></echart>
       </div>
 
       <div class="active-user">
-        <div class="title">Registered User</div>
+        <div class="title">Box Broken</div>
         <echart *ngIf="hasLine6Chart"  [chartType]="line6Chart" class="chart"></echart>
       </div>
     </div>
   </div>
 
 
-  <div class="bottom">
-    <div class="bottom-layout">
-      <div class="title">Trading Volume</div>
-      <div class="echarts-head">
-        <div class="txt">Today</div>
-        <div class="num">{{tradeToday}}<span class="currency">¥</span></div>
-      </div>
-      <echart *ngIf="hasLine7Chart"  [chartType]="line7Chart" class="chart"></echart>
-      <div class="bottom-divider"></div>
-    </div>
+  <!--<div class="bottom">-->
+    <!--<div class="bottom-layout">-->
+      <!--<div class="title">Trading Volume</div>-->
+      <!--<div class="echarts-head">-->
+        <!--<div class="txt">Today</div>-->
+        <!--<div class="num">{{tradeToday}}<span class="currency">¥</span></div>-->
+      <!--</div>-->
+      <!--<echart *ngIf="hasLine7Chart"  [chartType]="line7Chart" class="chart"></echart>-->
+      <!--<div class="bottom-divider"></div>-->
+    <!--</div>-->
 
-    <div class="bottom-layout">
-      <div class="radio-wrapper">
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==0}"(click)="setBar8Chart(0)"></span><span class="radio-txt">Total</span>
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==1}"(click)="setBar8Chart(1)"></span><span class="radio-txt">1 Month</span>
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==2}"(click)="setBar8Chart(2)"></span><span class="radio-txt">3 Months</span>
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==3}"(click)="setBar8Chart(3)"></span><span class="radio-txt">6 Months</span>
-      </div>
-      <div class="echarts-head">
-        <div class="amount">{{totalPrice}}<span class="currency">¥</span></div>
-      </div>
-      <echart *ngIf="hasBar8Chart"  [chartType]="bar8Chart" class="chart"></echart>
-    </div>
+    <!--<div class="bottom-layout">-->
+      <!--<div class="radio-wrapper">-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==0}"(click)="setBar8Chart(0)"></span><span class="radio-txt">Total</span>-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==1}"(click)="setBar8Chart(1)"></span><span class="radio-txt">1 Month</span>-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==2}"(click)="setBar8Chart(2)"></span><span class="radio-txt">3 Months</span>-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar8ChartIdx==3}"(click)="setBar8Chart(3)"></span><span class="radio-txt">6 Months</span>-->
+      <!--</div>-->
+      <!--<div class="echarts-head">-->
+        <!--<div class="amount">{{totalPrice}}<span class="currency">$</span></div>-->
+      <!--</div>-->
+      <!--<echart *ngIf="hasBar8Chart"  [chartType]="bar8Chart" class="chart"></echart>-->
+    <!--</div>-->
 
-    <div class="bottom-layout">
-      <div class="title">Order Quantity</div>
-      <div class="echarts-head">
-        <div class="txt">Today</div>
-        <div class="num">{{orderToday}}</div>
-      </div>
-      <echart *ngIf="hasLine9Chart"  [chartType]="line9Chart" class="chart"></echart>
-      <div class="bottom-divider"></div>
-    </div>
+    <!--<div class="bottom-layout">-->
+      <!--<div class="title">Order Quantity</div>-->
+      <!--<div class="echarts-head">-->
+        <!--<div class="txt">Today</div>-->
+        <!--<div class="num">{{orderToday}}</div>-->
+      <!--</div>-->
+      <!--<echart *ngIf="hasLine9Chart"  [chartType]="line9Chart" class="chart"></echart>-->
+      <!--<div class="bottom-divider"></div>-->
+    <!--</div>-->
 
-    <div class="bottom-layout">
-      <div class="radio-wrapper">
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==0}"(click)="setBar10Chart(0)"></span><span class="radio-txt">Total</span>
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==1}"(click)="setBar10Chart(1)"></span><span class="radio-txt">1 Month</span>
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==2}"(click)="setBar10Chart(2)"></span><span class="radio-txt">3 Months</span>
-        <span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==3}"(click)="setBar10Chart(3)"></span><span class="radio-txt">6 Months</span>
-      </div>
-      <div class="echarts-head">
-        <div class="amount">{{totalNum}}</div>
-      </div>
-      <echart *ngIf="hasBar10Chart"  [chartType]="bar10Chart" class="chart"></echart>
-    </div>
-  </div>
+    <!--<div class="bottom-layout">-->
+      <!--<div class="radio-wrapper">-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==0}"(click)="setBar10Chart(0)"></span><span class="radio-txt">Total</span>-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==1}"(click)="setBar10Chart(1)"></span><span class="radio-txt">1 Month</span>-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==2}"(click)="setBar10Chart(2)"></span><span class="radio-txt">3 Months</span>-->
+        <!--<span class="radio-icon" [ngClass]="{'radio-checked':bar10ChartIdx==3}"(click)="setBar10Chart(3)"></span><span class="radio-txt">6 Months</span>-->
+      <!--</div>-->
+      <!--<div class="echarts-head">-->
+        <!--<div class="amount">{{totalNum}}</div>-->
+      <!--</div>-->
+      <!--<echart *ngIf="hasBar10Chart"  [chartType]="bar10Chart" class="chart"></echart>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>
